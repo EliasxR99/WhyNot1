@@ -1,0 +1,140 @@
+-
+  var
+    html_class = "wide wow-animation",
+    fonts = "//fonts.googleapis.com/css?family=Poppins:400,500,600%7CTeko:300,400,500%7CMaven+Pro:500",
+    subscribeFormCounter = 0,
+    logo = {
+      default: 'logo-default-191x52',
+      inverse: 'logo-inverse-191x52',
+      defaultDecor: 'logo-default-decor-190x43',
+      defaultFurniture: 'logo-default-furniture-190x43',
+      defaultFlooring: 'logo-default-flooring-190x43',
+      defaultInterior: 'logo-default-interior-190x43',
+      defaultLandscape: 'logo-default-landscape-190x43',
+      defaultWindow: 'logo-default-window-190x43',
+      name: 'WhyNot'
+    },
+    //{DEL GRANTER USERPACKAGE}
+    googleApi = 'AIzaSyBl5VaAdEr01_e544aHdSdnKZLtcwRmXhk',
+    //{DEL}
+    links = {
+      post: '#',
+      getTemplate:'#get-template'
+    },
+    colors = {
+      primary: '#6689ff'
+    },
+    menu = [
+      {
+        title: 'Home',
+        category: 'home',
+        link: 'index.html'
+      },
+      {
+        title: 'About Us',
+        category: 'about'
+      },
+      {
+        title: 'Gallery',
+        category: 'gallery',
+        link: 'grid-gallery.html',
+        dropdown: [
+          { title: 'Full width Gallery' },
+          { title: 'Grid Gallery' },
+          { title: 'Full Width Masonry Gallery' },
+          { title: 'Masonry Gallery' }
+        ]
+      },
+      {
+        title: 'Pricing',
+        category: 'pricing',
+        link: 'pricing.html'
+      },
+      {
+        title: 'Blog',
+        category: 'blog',
+        link: 'classic-blog.html',
+        dropdown: [
+          {	title: 'Classic Blog' },
+          {	title: 'Grid Blog' },
+          {	title: 'Grid Blog 2' },
+          {	title: 'Grid Blog 3' },
+          {	title: 'Blog Post' }
+        ]
+      },
+      {
+        title: 'Contact Us',
+        category: 'contacts'
+      },
+      {
+        title: 'Pages',
+        category: 'pages',
+        link: '#',
+        megamenu: [
+          {
+            title: 'Elements',
+            list: [
+              { title: 'Typography' },
+              { title: 'Icons with Text' },
+              { title: 'Buttons' },
+              { title: 'Counters' },
+              { title: 'Forms' },
+              { title: 'Calls to Action' },
+              { title: 'Progress Bars' },
+              { title: 'Tabs and Accordions' },
+              { title: 'Hover Effects' },
+              { title: 'Grid System' }
+            ]
+          },
+          {
+            title: 'Additional pages',
+            list: [
+              { title: 'Services' },
+              { title: 'Services 2' },
+              { title: 'Single Service' },
+              { title: 'Our Team' },
+              { title: 'Testimonials' },
+              { title: '404 Page' },
+              { title: '503 Page' },
+              { title: 'Pricing' },
+              { title: 'Coming Soon' },
+              { title: 'Contact Us 2' },
+              { title: 'FAQ' },
+              { title: 'Search results' }
+            ]
+          }
+        ]
+      }
+    ],
+    clientes = {
+      jorge : {
+        opinion: "Nos ha encantado el modo de trabajo; es como todo cliente quiere y espera llevar a cabo un proyecto. Sentimos la confianza para conversar y solucionar todo imprevisto. Han superado nuestras espectativas y estamos muy felices con los resultados.",
+        nombre: "Jorge Muñoz",
+        empresa: "Mercado Vivo Agroecología",
+        rol: "Cliente E-Commerce"
+      },
+      valentina : {
+        opinion: "Son muy profesionales y con una disposición tremenda; muy profesionales y minuciosos; sin mencionar que sus sugerencias nos han ayudado mucho simplificar nuestro trabajo y reducir tiempos.",
+        nombre: "Valentina Barraza",
+        empresa: "Mercado Vivo Agroecología",
+        rol: "Cliente E-Commerce"
+      }
+    },
+    interno = {
+      contacto: {
+        telefonos: {
+          nicolas: "+56 9 82610778",
+          felipe: "+56 9 65094687"
+        },
+        emails:{
+          gmail: "sociedad.diaz.araya@gmail.com",
+          whynot: {
+            nicolas: "nicolas.diaz@whynotsolutions.cl",
+            felipe: "felipe.araya@whynotsolutions.cl"
+          }
+        },
+        instagram:{
+          url: "https://www.instagram.com/solutionswhynot"
+        }
+      }
+    };

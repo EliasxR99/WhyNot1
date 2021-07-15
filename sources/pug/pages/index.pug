@@ -1,0 +1,279 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-box-icon
+include ../components/_ui-counters
+include ../components/_ui-box-team
+include ../components/_ui-quote
+include ../components/_ui-posts
+
+block variables
+	- var activeCategory = 'home'
+	- var pageName = 'WhyNot Solutions'
+
+block page
+	// Header
+	+header-classic({logo: 'logo-con-texto.png', instagram: interno.contacto.instagram.url})
+	='\n'
+	
+	// Swiper
+	section.section.swiper-container.swiper-slider.swiper-slider-classic(data-loop='true' data-autoplay='4859' data-simulate-touch="true" data-direction='horizontal')
+		.swiper-wrapper.text-center
+			.swiper-slide(data-slide-bg='images/slider-1-slide-2-1770x742.jpg')
+				.swiper-slide-caption.section-md
+					.container
+						h1(data-caption-animate='fadeInLeft' data-caption-delay='0') Equipo experimentado
+						p.text-width-large(data-caption-animate='fadeInRight' data-caption-delay='100') Formado por profesionales de la informática, ingenieros en informática especializados en diferentes áreas de la misma, 5 años de experiencia y aprendizaje constante.
+						a.button.button-primary.button-ujarak(href='#stack') Ver más
+			.swiper-slide(data-slide-bg='images/slider-1-slide-4-1770x742.jpg')
+				.swiper-slide-caption.section-md
+					.container
+						h1(data-caption-animate='fadeInLeft' data-caption-delay='0') Software tu medida
+						p.text-width-large(data-caption-animate='fadeInRight' data-caption-delay='100') Construimos lo que tú o tu empresa necesitan y lo hacemos en conjunto. Reuniones, comentarios, modificación, pruebas y todo lo que sea necesario para que te sientas cómodo con el resultado final.
+						a.button.button-primary.button-ujarak(href='#modalCta' data-toggle="modal" data-caption-animate='fadeInUp' data-caption-delay='200') Ver más
+			.swiper-slide(data-slide-bg='images/slider-1-slide-6-1770x742.jpg')
+				.swiper-slide-caption.section-md
+					.container
+						h1(data-caption-animate='fadeInLeft' data-caption-delay='0') E-Commerce, WebPay y Chilexpress
+						p.text-width-large(data-caption-animate='fadeInRight' data-caption-delay='100') El comercio electrónico cada día ganan más terreno y por lo mismo, te ayudamos a obtener tu tienda y dejarla lista para que tus clientes reciban los productos sin moverse de su casa.
+						a.button.button-primary.button-ujarak(href='#planes') Ver más
+		
+	
+	// Nuestros servicios
+	section.section.section-sm.section-first.bg-default.text-center#servicios
+		.container
+			.row.row-30.justify-content-center
+				.col-md-7.col-lg-5.col-xl-6.text-lg-left.wow.fadeInUp
+					+png('index-1-415x592')
+				.col-lg-7.col-xl-6
+					.row.row-30
+						.col-sm-6.wow.fadeInRight
+							article.box-icon-modern.box-icon-modern-custom: div
+								h3.box-icon-modern-big-title ¿Qué ofrecemos?
+								.box-icon-modern-decor
+								a.button.button-primary.button-ujarak(href='#stack') TODOS LOS SERVICIOS
+						.col-sm-6.wow.fadeInRight(data-wow-delay='.1s')
+							+box-icon-modern({
+								mod: 'box-icon-modern-2',
+								icon: 'linearicons-phone-in-out',
+								title: 'Soluciones<br>Corporativas',
+								text: '¿Necesitas software específico para tu compañía? Estamos listos para desarrollarlo!'
+							})
+						.col-sm-6.wow.fadeInRight(data-wow-delay='.2s')
+							+box-icon-modern({
+								mod: 'box-icon-modern-2',
+								icon: 'linearicons-chart-growth',
+								title: 'E-Commerce', 
+								text: 'Aumenta tus ventas gracias a una tienda que jamás cierra. Pagos con WebPay, envíos, control de inventarios y mucho más.'
+							})
+						.col-sm-6.wow.fadeInRight(data-wow-delay='.3s')
+							+box-icon-modern({ 
+								mod: 'box-icon-modern-2',
+								icon: 'linearicons-outbox',
+								title: 'CLOUD<br>DEVELOPMENT',
+								text: 'Todos nuestros desarrollos son heechos en la nube y cuando está listo, lo llevamos a su Hosting'
+							})
+	='\n'
+	
+	// Cta
+	section.section.section-fluid.bg-default
+		+parallax({
+			img: 'parallax-1',
+			innerClass: 'section-xl context-dark'
+		})
+			.container
+				.row.row-30.justify-content-end.text-right
+					.col-sm-7.smood
+						h3.wow.fadeInLeft Desarrollemos juntos tu próxima aplicación
+						p La tecnología existe para simplificar tu vida y la de tu negocio. WhyNot existe para hacerlo sencillo. No importa el tamaño de tu idea, podemos hacerla realidad.
+						.group-sm.group-middle.group.justify-content-end
+							a.button.button-primary.button-ujarak(href='#modalCta' data-toggle="modal") Dime como
+	='\n'
+	
+	// Que sabemos
+	section.section.section-sm.section-fluid.bg-default.text-center#stack
+		.container-fluid
+			h2.wow.fadeInLeft ¿Qué sabemos hacer?
+			p.quote-jean.wow.fadeInRight(data-wow-delay='.1s') A lo largo del tiempo hemos aprendido a manejar muchas herramientas, cada una con sus beneficios y desventajas, pero todas igual de poderosas.
+			include ../sections/_section-full-width-gallery
+	='\n'
+	
+	// Conoce al equipo
+	section.section.section-sm.section-fluid.bg-default#equipo
+		.container-fluid
+			h2 Conoce al equipo
+			.row.row-sm.row-30.justify-content-center
+				.col-md-6.col-lg-5.col-xl-3.wow.fadeInRight
+					+team-classic({
+						mod: 'team-classic-lg',
+						img: 'team-felipearaya-420x424',
+						name: 'Felipe Araya T',
+						status: 'Senior DevOps'
+					})
+				.col-md-6.col-lg-5.col-xl-3.wow.fadeInRight(data-wow-delay='.1s')
+					+team-classic({
+						mod: 'team-classic-lg',
+						img: 'team-marceloaraya-420x424',
+						name: 'Marcelo Araya T',
+						status: 'Administración y Finanzas'
+					})
+				.col-md-6.col-lg-5.col-xl-3.wow.fadeInRight(data-wow-delay='.2s')
+					+team-classic({
+						mod: 'team-classic-lg',
+						img: 'team-13-420x424',
+						name: 'Nicolás Díaz M',
+						status: 'Senior Developer'
+					})
+				.col-md-6.col-lg-5.col-xl-3.wow.fadeInRight(data-wow-delay='.3s')
+					+team-classic({
+						mod: 'team-classic-lg',
+						img: 'team-14-420x424',
+						name: 'Iván Sepúlveda',
+						status: 'UI/UX Designer'
+					})
+	='\n'
+
+
+	
+	// ¿Qué opinan nuestros clientes?
+	section.section.section-sm.section-bottom-70.section-fluid.bg-default
+		.container-fluid
+			h2 ¿Qué opinan nuestros clientes?
+			.row.row-50.row-sm
+				.col-md-6.col-xl-6.wow.fadeInRight
+					+quote-modern({
+						mod: 'quote-modern-custom',
+						img: 'mercadovivo-75x75',
+						author: clientes.jorge.nombre,
+						status: clientes.jorge.rol,
+						text: clientes.jorge.opinion
+					})
+				.col-md-6.col-xl-6.wow.fadeInRight(data-wow-delay='.1s')
+					+quote-modern({
+						mod: 'quote-modern-custom',
+						img: 'mercadovivo-75x75',
+						author: clientes.valentina.nombre,
+						status: clientes.valentina.rol,
+						text: clientes.valentina.opinion,
+					})
+	
+	// Planes
+	section.section.section-sm.section-bottom-70.section-fluid.bg-default#planes
+		.container
+			h2 Planes
+			.row.row-30.justify-content-center
+				.col-md-6.col-lg-5.col-xl-4
+					.box-pricing.box-pricing-black
+						.box-pricing-body
+							h5.box-pricing-title Landing Sencillo
+							h3.box-pricing-price $100.000
+							.box-pricing-time
+								small (desde)
+							.box-pricing-divider
+								.divider
+								span Básico
+							ul.box-pricing-list
+								li.active Análisis de la competencia
+								li.active Propuestas de diseño
+								li.active Reuniones de avance y feedback
+								li.active Correo de contacto
+								li.active Google Analytics y Hotjar
+								li.active Informe sobre comportamiento de usuarios por 3 meses
+								li.active 30 días marcha blanca
+								
+						.box-pricing-button: a.button.button-lg.button-block.button-gray-4(href='#') Lo quiero
+				.col-md-6.col-lg-5.col-xl-4
+					.box-pricing.box-pricing-black.box-pricing-popular
+						.box-pricing-body
+							h5.box-pricing-title A medida
+							h3.box-pricing-price Contáctanos
+							.box-pricing-time (según requerimientos)
+							.box-pricing-divider
+								.divider
+								span A medida
+							ul.box-pricing-list
+								li.active Intranet
+								li.active Sistemas a medida  
+								li.active Modificación de sistemas existentes
+								li.active Responsive
+								li.active Metodología Agile
+								li.active Desarrollo Cloud
+								li.active Software Factory
+								li.active Soporte comprometido
+						.box-pricing-button: a.button.button-lg.button-block.button-primary(href='#') Lo quiero
+						.box-pricing-badge popular
+				.col-md-6.col-lg-5.col-xl-4
+					.box-pricing.box-pricing-black.box-pricing-popular
+						.box-pricing-body
+							h5.box-pricing-title Autoadministrable
+							h3.box-pricing-price $200.000
+							.box-pricing-time
+								small (desde)
+							.box-pricing-divider
+								.divider
+								span Autoadministrable
+							ul.box-pricing-list
+								li.active Análisis de la competencia
+								li.active Reuniones de avance, diseño y análisis
+								li.active Integración Webpay
+								li.active Correo de contacto
+								li.active Botón de Whatsapp
+								li.active Construido en Wordpress
+								li.active 30 días marcha blanca
+								li.active Agrégale lo que necesites
+						.box-pricing-button: a.button.button-lg.button-block.button-gray-4(href='#') Lo quiero
+				
+	='\n'
+	
+	// Información de contacto
+	section.section.section-sm.bg-default
+		include ../sections/_contact-information
+	='\n'
+	
+	// Formulario de contacto
+	section.section.section-sm.bg-default.text-left#contacto
+		.container
+			p Estamos trabajando para que puedas enviarnas mensajes facilmente. Por ahora, te pedimos que nos escribas a uno de estos correos, o llámanos, estarémos encantados de resolver tus dudas.
+			//- article.title-classic
+				//- div.title-classic-title: h3 ¿Tienes dudas?
+				//- div.title-classic-text: p Si tienes una pregunta, envíanos un mensaje y te responderemos rápidamente.
+			//- include ../sections/_contact-form-2
+	='\n'
+	
+	// Footer
+	include ../sections/_footer-minimal
+	='\n'
+	
+	#modalCta.modal.fade(tabindex="-1" role="dialog" aria-hidden="true")
+		.modal-dialog(role="document")
+			.modal-content
+				
+				.modal-header
+					h4 Hablemos
+					
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span(aria-hidden="true") ×
+				
+				.modal-body
+					form.rd-form.rd-form-variant-2.rd-mailform(data-form-output='form-output-global', data-form-type='contact-modal', method='post', action='bat/rd-mailform.php')
+						.row.row-14.gutters-14
+							.col-12
+								.form-wrap
+									input#contact-modal-name.form-input(type='text' name='name' data-constraints='@Required')
+									label.form-label(for='contact-modal-name') Nombre completo
+							.col-12
+								.form-wrap
+									input#contact-modal-email.form-input(type='email' name='email' data-constraints='@Email @Required')
+									label.form-label(for='contact-modal-email') E-mail
+							.col-12
+								.form-wrap
+									input#contact-modal-phone.form-input(type='text' name='phone' data-constraints='@Numeric')
+									label.form-label(for='contact-modal-phone') Teléfono
+							.col-12
+								.form-wrap
+									label.form-label(for='contact-modal-message') Mensaje
+									textarea#contact-modal-message.form-input.textarea-lg(name='message' data-constraints='@Required')
+									
+						button.button.button-primary.button-pipaluk(type='submit') Enviar
+
+

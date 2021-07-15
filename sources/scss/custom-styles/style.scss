@@ -1,0 +1,37 @@
+/*
+* Trunk version 2.0.0
+*/
+@import "main-styles";
+
+.modal-open .modal {
+	padding-right: 0 !important;
+}
+
+.modal.show .modal-dialog {
+	transform: translate(0, -50%);
+	top: 50%;
+}
+
+.modal-dialog {
+	max-height: 100vh;
+}
+
+// Medium ≥576px
+@include media-breakpoint-up(sm) {
+	.modal-dialog {
+		margin: 0 auto;
+	}
+
+	.modal-content {
+		margin: 15px 0;
+	}
+}
+
+.modal-header .close {
+	cursor: pointer;
+}
+
+.modal-header,
+.modal-body {
+	padding: 15px 30px;
+}
