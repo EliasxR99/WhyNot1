@@ -1,0 +1,18 @@
+.container
+  .row.row-30.justify-content-center
+    .col-sm-8.col-md-6.col-lg-4
+      +box-contacts({
+        icon: 'fl-bigmug-line-cellphone55',
+        tel: [
+          {text: interno.contacto.telefonos.nicolas},
+          {text: interno.contacto.telefonos.felipe}
+        ]
+      })
+    .col-sm-8.col-md-6.col-lg-4
+      +box-contacts({
+        icon: 'fl-bigmug-line-chat55',
+        mail: [
+          {text: interno.contacto.emails.whynot.nicolas},
+          {text: interno.contacto.emails.whynot.felipe}
+        ]
+      })

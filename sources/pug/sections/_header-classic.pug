@@ -1,0 +1,47 @@
+mixin header-classic(obj)
+	header.section.page-header#home
+		// Navbar
+		.rd-navbar-wrap
+			nav.rd-navbar.rd-navbar-classic(
+			data-layout=                'rd-navbar-fixed'
+			data-sm-layout=             'rd-navbar-fixed'
+			data-md-layout=             'rd-navbar-fixed'
+			data-md-device-layout=      'rd-navbar-fixed'
+			data-lg-layout=             'rd-navbar-static'
+			data-lg-device-layout=      'rd-navbar-fixed'
+			data-xl-layout=             'rd-navbar-static'
+			data-xl-device-layout=      'rd-navbar-static'
+			data-xxl-layout=            'rd-navbar-static'
+			data-xxl-device-layout=     'rd-navbar-static'
+			data-lg-stick-up-offset=    '46px'
+			data-xl-stick-up-offset=    '46px'
+			data-xxl-stick-up-offset=   '46px'
+			data-lg-stick-up=           'true'
+			data-xl-stick-up=           'true'
+			data-xxl-stick-up=          'true'
+			class=obj.mod )
+				.rd-navbar-main-outer
+					.rd-navbar-main
+						// Navbar
+						.rd-navbar-panel
+							//Navbar Toggle
+							button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+							
+							// Navbar Brand
+							.rd-navbar-brand: a.brand(href='index.html'): +imageFromJson({name: obj.logo, height: '56px', width:'auto'})
+						
+						.rd-navbar-main-element
+							.rd-navbar-nav-wrap
+								ul.rd-navbar-nav
+									li.rd-nav-item(class='active')
+										a.rd-nav-link(href='#home') Home
+									li.rd-nav-item
+										a.rd-nav-link(href='#servicios') Servicios
+									li.rd-nav-item
+										a.rd-nav-link(href='#stack') ¿Qué sabemos?
+									li.rd-nav-item
+										a.rd-nav-link(href='#equipo') Equipo									
+									li.rd-nav-item
+										a.rd-nav-link(href='#planes') Planes
+									li.rd-nav-item
+										a(href=obj.instagram target='_blank' class='icon fa fa-instagram')

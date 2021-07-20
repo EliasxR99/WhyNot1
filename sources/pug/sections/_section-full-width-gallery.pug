@@ -1,0 +1,185 @@
+.isotope-filters.isotope-filters-horizontal
+	button.isotope-filters-toggle.button.button-md.button-icon.button-icon-right.button-default-outline.button-wapasha(data-custom-toggle='#isotope-3', data-custom-toggle-hide-on-blur='true')
+		span.icon.fa.fa-caret-down
+		| Filter
+	ul#isotope-3.isotope-filters-list
+		li: a.active(href='#', data-isotope-filter='*', data-isotope-group='gallery') Todo
+		li: a(href='#', data-isotope-filter='backend', data-isotope-group='gallery') Backend
+		li: a(href='#', data-isotope-filter='frontend', data-isotope-group='gallery') Frontend 
+		li: a(href='#', data-isotope-filter='db', data-isotope-group='gallery') Base de datos
+		li: a(href='#', data-isotope-filter='cloud', data-isotope-group='gallery') Cloud
+		li: a(href='#', data-isotope-filter='testing', data-isotope-group='gallery') QA & Testing
+		li: a(href='#', data-isotope-filter='devops', data-isotope-group='gallery') DevOps
+.row.row-30.isotope(data-isotope-layout='fitRows', data-isotope-group='gallery', data-lightgallery='group')
+	.col-sm-6.col-lg-2.col-xxl-2.isotope-item.wow.fadeInRight(data-filter='backend')
+		+thumbnail-whynot({
+			mod: 'thumbnail-md',
+			image: 'spring-boot.jpg',
+			sizeImg: '420x350',
+			title: 'Spring Boot',
+			link: 'https://spring.io/projects/spring-boot',
+			description: 'Hola, sabemos usar spring'
+		})
+	.col-sm-6.col-lg-2.col-xxl-2.isotope-item.wow.fadeInRight(data-filter='backend' data-wow-delay='.1s')
+		+thumbnail-whynot({
+			mod: 'thumbnail-md',
+			image: 'symfony.jpg',
+			sizeImg: '420x350',
+			title: 'Symfony',
+			link: 'https://symfony.com',
+			description: 'Hola, sabemos usar Symfony'
+		})
+	.col-sm-6.col-lg-2.col-xxl-2.isotope-item.wow.fadeInRight(data-filter='backend' data-wow-delay='.2s')
+		+thumbnail-whynot({
+			mod: 'thumbnail-md',
+			image: 'go.jpg',
+			sizeImg: '420x350',
+			title: 'GO',
+			link: 'https://golang.org',
+			description: 'Hola, sabemos usar GO'
+		})
+	.col-sm-6.col-lg-2.col-xxl-2.isotope-item.wow.fadeInRight(data-filter='frontend' data-wow-delay='.3s')
+		+thumbnail-whynot({
+			mod: 'thumbnail-md',
+			image: 'javascript.jpg',
+			sizeImg: '420x350',
+			title: 'Javascript',
+			link: 'https://www.javascript.com',
+			description: ''
+		})
+	
+	.col-sm-6.col-lg-2.col-xxl-2.isotope-item.wow.fadeInLeft(data-filter='frontend')
+		+thumbnail-whynot({
+			mod: 'thumbnail-md',
+			image: 'angular.jpg',
+			sizeImg: '420x350',
+			title: 'Angular.js',
+			link: 'https://angularjs.org',
+			description: ''
+		})
+	.col-sm-6.col-lg-2.col-xxl-2.isotope-item.wow.fadeInLeft(data-filter='frontend' data-wow-delay='.1s')
+		+thumbnail-whynot({
+			mod: 'thumbnail-md',
+			image: 'react.jpg',
+			sizeImg: '420x350',
+			title: 'React.js',
+			link: 'https://es.reactjs.org',
+			description: ''
+		})
+	.col-sm-6.col-lg-2.col-xxl-2.isotope-item.wow.fadeInLeft(data-filter='db' data-wow-delay='.2s')
+		+thumbnail-whynot({
+			mod: 'thumbnail-md',
+			image: 'mysql.jpg',
+			sizeImg: '420x350',
+			title: 'MySQL',
+			link: 'https://www.mysql.com',
+			description: ''
+		})
+	.col-sm-6.col-lg-2.col-xxl-2.isotope-item.wow.fadeInLeft(data-filter='db' data-wow-delay='.3s')
+		+thumbnail-whynot({
+			mod: 'thumbnail-md',
+			image: 'oracle.jpg',
+			sizeImg: '420x350',
+			title: 'Oracle',
+			link: 'https://www.oracle.com/lad/index.html',
+			description: ''
+		})
+	.col-sm-6.col-lg-2.col-xxl-2.isotope-item.wow.fadeInLeft(data-filter='db' data-wow-delay='.3s')
+		+thumbnail-whynot({
+			mod: 'thumbnail-md',
+			image: 'postgresql.jpg',
+			sizeImg: '420x350',
+			title: 'PostgreSQL',
+			link: 'https://www.postgresql.org',
+			description: ''
+		})
+	.col-sm-6.col-lg-2.col-xxl-2.isotope-item.wow.fadeInLeft(data-filter='db' data-wow-delay='.3s')
+		+thumbnail-whynot({
+			mod: 'thumbnail-md',
+			image: 'sqlserver.jpg',
+			sizeImg: '420x350',
+			title: 'SqlServer',
+			link: 'https://www.microsoft.com/es-es/sql-server/sql-server-2019',
+			description: ''
+		})
+	.col-sm-6.col-lg-2.col-xxl-2.isotope-item.wow.fadeInLeft(data-filter='cloud' data-wow-delay='.3s')
+		+thumbnail-whynot({
+			mod: 'thumbnail-sm',
+			image: 'aws.jpg',
+			sizeImg: '420x350',
+			title: 'Amazon Web Service',
+			link: 'https://aws.amazon.com/es',
+			description: ''
+		})
+	.col-sm-6.col-lg-2.col-xxl-2.isotope-item.wow.fadeInLeft(data-filter='cloud' data-wow-delay='.3s')
+		+thumbnail-whynot({
+			mod: 'thumbnail-sm',
+			image: 'gcp.jpg',
+			sizeImg: '420x350',
+			title: 'Google Cloud Platform',
+			link: 'https://cloud.google.com',
+			description: ''
+		})
+	.col-sm-6.col-lg-2.col-xxl-2.isotope-item.wow.fadeInLeft(data-filter='cloud' data-wow-delay='.3s')
+		+thumbnail-whynot({
+			mod: 'thumbnail-md',
+			image: 'azure.jpg',
+			sizeImg: '420x350',
+			title: 'Microsoft Azure',
+			link: 'https://azure.microsoft.com/es-es',
+			description: ''
+		})
+	.col-sm-6.col-lg-2.col-xxl-2.isotope-item.wow.fadeInLeft(data-filter='testing' data-wow-delay='.3s')
+		+thumbnail-whynot({
+			mod: 'thumbnail-md',
+			image: 'jmeter.jpg',
+			sizeImg: '420x350',
+			title: 'Apache JMeter',
+			link: 'https://jmeter.apache.org',
+			description: ''
+		})
+	.col-sm-6.col-lg-2.col-xxl-2.isotope-item.wow.fadeInLeft(data-filter='testing' data-wow-delay='.3s')
+		+thumbnail-whynot({
+			mod: 'thumbnail-md',
+			image: 'selenium.jpg',
+			sizeImg: '420x350',
+			title: 'Selenium',
+			link: 'https://www.selenium.dev',
+			description: ''
+		})
+	.col-sm-6.col-lg-2.col-xxl-2.isotope-item.wow.fadeInLeft(data-filter='devops' data-wow-delay='.3s')
+		+thumbnail-whynot({
+			mod: 'thumbnail-md',
+			image: 'docker.jpg',
+			sizeImg: '420x350',
+			title: 'Docker',
+			link: 'https://www.docker.com',
+			description: ''
+		})
+	.col-sm-6.col-lg-2.col-xxl-2.isotope-item.wow.fadeInLeft(data-filter='devops' data-wow-delay='.3s')
+		+thumbnail-whynot({
+			mod: 'thumbnail-md',
+			image: 'kubernetes.jpg',
+			sizeImg: '420x350',
+			title: 'Kubernetes',
+			link: 'https://kubernetes.io/es/docs/concepts/overview/what-is-kubernetes',
+			description: ''
+		})
+	.col-sm-6.col-lg-2.col-xxl-2.isotope-item.wow.fadeInLeft(data-filter='devops' data-wow-delay='.3s')
+		+thumbnail-whynot({
+			mod: 'thumbnail-md',
+			image: 'jenkins.jpg',
+			sizeImg: '420x350',
+			title: 'Jenkins',
+			link: 'https://www.jenkins.io',
+			description: ''
+		})
+	.col-sm-6.col-lg-2.col-xxl-2.isotope-item.wow.fadeInLeft(data-filter='devops' data-wow-delay='.3s')
+		+thumbnail-whynot({
+			mod: 'thumbnail-md',
+			image: 'gitlab.jpg',
+			sizeImg: '420x350',
+			title: 'GitLab',
+			link: 'https://about.gitlab.com',
+			description: ''
+		})
